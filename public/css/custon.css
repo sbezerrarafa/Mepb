@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 0;
+}
+.logo img {
+    width: 150px;
+}
+.container-login {
+    max-width: 410px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.container-login h3 {
+    color: #ba2029;
+    font-weight: 700;
+}
+.container-login p {
+    font-weight: lighter;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+.btn-enviar {
+    width: 100%;
+    padding: 10px;
+    background: #99cbc7;
+    font-weight: 700;
+    margin-top: 40px;
+    color: white;
+}
+.input-logar {
+    margin: 30px 0px;
+    padding: 10px;
+    background: #f6f6f6;
+}
+
+/* menu */
+.container-menu {
+    padding: 60px 30px;
+    max-width: 768px;
+    margin: 0 auto;
+}
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.btn-cadastrar {
+    width: 180px;
+    height: 50px;
+    background: #99cbc7;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 40px 24px;
+}
+.btn-cadastrar:hover {
+    transform: scale(1.1);
+}
+.menu .card {
+    border-radius: 16px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 30px;
+    margin: 20px;
+    width: 300px;
+    height: 250px;
+    transition: all 0.3s ease-out;
+    color: white;
+}
+.menu .card:hover {
+    transform: scale(1.1);
+}
+.card p {
+    font-size: 60px;
+}
+
+.btn-card {
+    position: absolute;
+    width: 101px;
+    height: 37px;
+    left: 183px;
+    top: 189px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+}
+.visitantes-semana {
+    background: linear-gradient(321.69deg, #f84b75 0%, #ffb199 100%);
+}
+.visitantes-semana button a {
+    color: #f84b75;
+}
+.visitantes-total {
+    background: linear-gradient(321.69deg, #141518 0%, #04befe 100%);
+}
+.visitantes-total button a {
+    color: #04befe;
+}
+.total-membros {
+    background: linear-gradient(
+            132.9deg,
+            #ade9e4 1.3%,
+            #79cf9f 5.33%,
+            #aae8e1 98.05%,
+            #77ce9c 98.06%
+        ),
+        linear-gradient(143.36deg, #d6ff94 3.66%, #3dc24b 103.19%);
+}
+.total-membros button a {
+    color: #3dc24b;
+}
+.aniversariantes-mes {
+    background: linear-gradient(
+        321.69deg,
+        #0cf7b0 0%,
+        #04fe95 0.01%,
+        #249f5d 15.62%,
+        #04fe86 100%
+    );
+}
+.aniversariantes-mes button a {
+    color: #249f5d;
+}
+
+/* formulário de cadastro */
+
+.logo-canto {
+    border-radius: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+.logo-canto img {
+    width: 85px;
+    height: 85px;
+}
+
+.container-cadastro {
+    padding: 0 30px;
+    max-width: 768px;
+    margin: 0 auto;
+}
+.container-cadastro h2 {
+    color: brown;
+}
+.btns-formulario {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: flex-end;
+    margin: 60px 0;
+    color: white;
+}
+
+.btn-salvar {
+    width: 150px;
+    height: 50px;
+    background: #99cbc7;
+    font-weight: bold;
+    color: white;
+}
+
+.btn-cancelar {
+    width: 150px;
+    height: 50px;
+    background: #8a8a8a;
+    font-weight: bold;
+    color: white;
+}
+
+.box-imagens {
+    width: 100%;
+    flex-basis: 100%;
+    min-height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.box-imagens img {
+    width: 100%;
+}
+
+.checkboxs {
+    display: flex;
+    gap: 30px;
+}
+
+/* tabela membros */
+
+.tabela-membros {
+    padding: 0 20px;
+}
+
+.tabela-membros .card {
+    padding: 10px;
+}
+
+.tabela-membros h3 {
+    color: #436049;
+}
+.topo-tabelas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+.btn-voltar {
+    width: 100px;
+    height: 40px;
+    color: white;
+    background: #565656;
+    font-weight: 700;
+    border-radius: 8px;
+}
+.btn-exluir {
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+}
+.btn-editar {
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-editar:hover {
+    transform: scale(1.1);
+}
+
+.btn-exluir:hover {
+    transform: scale(1.1);
+}
+
+.btn-voltar:hover {
+    transform: scale(1.1);
+}
+
+/* tabela aniversariante */
+.btn-classificacao {
+    font-weight: 700;
+    color: white;
+    background: darksalmon;
+}
+.adulto {
+    background: cornflowerblue;
+}
+
+.tabela-aniversariante {
+    padding: 0 20px;
+}
+.tabela-aniversariante .card {
+    padding: 10px;
+}
+.tabela-aniversariante h3 {
+    color: #d01f1f;
+}
+
+/* visitantes */
+.tabela-visitantes {
+    padding: 0 20px;
+}
+.tabela-visitantes h3 {
+    color: #0c7697;
+}
+.tabela-visitantes .card {
+    padding: 10px;
+}
+
+/*  responsividade */
+/*  menu */
+@media (max-width: 500px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
