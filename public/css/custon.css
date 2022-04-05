@@ -50,6 +50,10 @@ a:active {
     padding: 10px;
     background: #f6f6f6;
 }
+.esqueceu-senha {
+    color: #ba2029 !important;
+    text-decoration: none;
+}
 
 /* menu */
 .container-menu {
