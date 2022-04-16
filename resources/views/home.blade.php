@@ -1,23 +1,35 @@
-@extends('layouts.app')
+@extends('layouts.master')
+
+
+@section('title', 'Dashboard')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
+<section class="container-menu">
+    <div>
+      <button class="btn-cadastrar"><a href="{{ route('pessoas.create') }}">Adicionar Pessoa +</a> </button>
     </div>
-</div>
-@endsection
+    <section class="menu">
+      <div class="card  visitantes-semana">
+        <h3>Visitantes da Última Semana</h3>
+        <p>3</p>
+        <button class="btn btn-card">Ver Todos</button>
+      </div>
+      <div class="card visitantes-total">
+        <h3>Total de Vistantes Cadastrados</h3>
+        <p>58</p>
+        <button class="btn btn-card">Ver Todos</button>
+      </div>
+      <div class="card total-membros ">
+        <h3>Total de Membros Cadastrados</h3>
+        <p>302</p>
+        <button class="btn btn-card"><a href="membros.html">Ver Todos</a></button>
+      </div>
+      <div class="card aniversariantes-mes">
+        <h3>Aniversáriantes do Mês</h3>
+        <p>5</p>
+        <button class="btn btn-card">Ver Todos</button>
+      </div>
+    </section>
+  </section>
+  @endsection
+  

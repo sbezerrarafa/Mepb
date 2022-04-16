@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Cadastro;
 
-class CadastrosController extends Controller
+class PessoaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class CadastrosController extends Controller
      */
     public function index()
     {
-        //
+        
+        return view('pessoa.index');
     }
 
     /**
@@ -23,7 +25,7 @@ class CadastrosController extends Controller
      */
     public function create()
     {
-        //
+        return view('pessoas.criar');
     }
 
     /**
