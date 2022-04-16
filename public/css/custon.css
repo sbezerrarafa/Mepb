@@ -61,6 +61,24 @@ a:active {
     max-width: 768px;
     margin: 0 auto;
 }
+.area-sair {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.area-sair .sair {
+    color: black;
+    font-size: 20px;
+    margin: 0 30px;
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+}
+.adicionar-user {
+    text-decoration: underline !important;
+    color: #99cbc7 !important;
+    font-size: 18px;
+}
 .menu {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -5,8 +5,12 @@
 
 @section('content')
 <section class="container-menu">
-    <div>
+    <div class="area-sair">
       <button class="btn-cadastrar"><a href="{{ route('pessoas.create') }}">Adicionar Pessoa +</a> </button>
+      <a class="sair" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Sair <i class="far fa-sign-out"></i></a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+          @csrf
+        </form>
     </div>
     <section class="menu">
       <div class="card  visitantes-semana">
@@ -30,6 +34,7 @@
         <button class="btn btn-card">Ver Todos</button>
       </div>
     </section>
+      <a class="adicionar-user"  href="{{ route('register') }}">{{ __('Register') }}</a>
   </section>
   @endsection
   
