@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PessoaController;
 
 Auth::routes([
-    'register' => false
+    'register' => true
 ]);
 Route::get('/', function () {
     return view('auth.login');
