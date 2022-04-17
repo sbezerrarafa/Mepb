@@ -24,11 +24,11 @@
           </div>
           <div class="form-group">
             <label for="telefone">Telefone</label>
-            <input name="tell" class="form-control" type="text" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx">
+            <input name="tell" class="form-control" type="text" id="telefone" placeholder="(xx) xxxxx-xxxx">
           </div>
           <div class="form-group ">
             <label for="inputEmail4">Redes sociais</label>
-            <input name="redes_social" type="name" class="form-control" id="inputEmail4" placeholder="informe seu insta ou facebook">
+            <input name="redes_sociais" type="name" class="form-control" id="inputEmail4" placeholder="informe seu insta ou facebook">
           </div>
           <div class="form-group ">
             <label for="inputEmail4">Membro de Alguma Igreja?</label>
@@ -96,3 +96,6 @@
   </section>
 
   @endsection
+  @section('js')
+    {!! JsValidator::formRequest('App\Http\Requests\PessoaRequest') !!}
+@endsection
