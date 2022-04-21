@@ -16,7 +16,7 @@ class PessoaController extends Controller
     public function index()
     {
         
-        return view('pessoa.index');
+        return view('pessoas.index');
     }
 
     /**
@@ -35,9 +35,13 @@ class PessoaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PessoaRequest $request)
+    public function store(Request $request)
     {
         dd($request->all());
+        Pessoa::create($request->all());
+        return redirect()->route('pessoas.index')
+            ->with('success', 'Cadastro realizado.');
+       
     }
 
     /**

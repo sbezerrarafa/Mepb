@@ -16,7 +16,7 @@
         <div class="col-md-6">
           <div class="form-group">
             <label>Nome</label>
-            <input type="text" class="form-control" name="name" id="nome" placeholder="Nome">
+            <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
           </div>
           <div class="form-group">
             <label>Endereço</label>
@@ -76,13 +76,13 @@
       </div>
     <div class="d-flex " style="gap:15px;">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault1" checked>
+          <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault1" checked value="membros">
           <label class="form-check-label" for="flexRadioDefault1">
           Membros
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault2" >
+          <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault2" value="visitante" >
           <label class="form-check-label" for="flexRadioDefault2">
           Visitante
           </label>

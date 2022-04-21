@@ -15,7 +15,7 @@ class BaseRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Insira um Nome',
+            'nome.required' => 'Insira um Nome',
             'niver.required'=> 'Insira a Data de Aniversário'
             
         ];

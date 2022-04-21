@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -12,7 +12,7 @@ class Pessoa extends Model
 
     protected $fillable = [
         'id',
-        'name',
+        'nome',
         'endereco',
         'tell',
         'redes_sociais',
@@ -23,7 +23,7 @@ class Pessoa extends Model
         'observacoes',
         'casado_com',
         'niver_casamento',
-     'tipo',
+        'tipo',
     ];
 }
 

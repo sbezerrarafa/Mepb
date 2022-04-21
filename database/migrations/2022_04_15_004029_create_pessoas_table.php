@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCadastromembrosTable extends Migration
+class CreatePessoasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,20 @@ class CreateCadastromembrosTable extends Migration
      */
     public function up()
     {
-        Schema::create('cadastromembros', function (Blueprint $table) {
+        Schema::create('pessoas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('nome');
             $table->string('endereco');
-            $table->string('tell', '15');
+            $table->string('tell', 15);
             $table->string('redes_sociais');
             $table->string('membro_igreja');
+            $table->string('imagem');
             $table->date('niver');
             $table->date('data_membro');
+            $table->string('observacoes');
             $table->string('casado_com');
-            $table->string('profession');
             $table->date('niver_casamento');
+            $table->boolean('tipo');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -37,6 +39,6 @@ class CreateCadastromembrosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cadastromembros');
+        Schema::dropIfExists('pessoas');
     }
 }
