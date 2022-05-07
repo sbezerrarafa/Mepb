@@ -6,7 +6,7 @@
     <section class="tabela-membros">
         <div class="topo-tabelas">
             <h3>Membros</h3>
-            <button class="btn btn-voltar"><a href="home.html">voltar</a></button>
+            <button class="btn btn-voltar"><a href="{{ route('home') }}">voltar</a></button>
         </div>
         <div class="card">
             <div class="table-responsive-sm">

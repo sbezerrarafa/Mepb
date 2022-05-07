@@ -64,13 +64,13 @@ class PessoaController extends Controller
      */
     public function edit($id)
     {
-        $pessoas = Pessoa::find($id);
+        $pessoa = Pessoa::find($id);
 
-        if (!$pessoas) {
+        if (!$pessoa) {
             return $this->redirectNotFound($this->bladePath);
         }
 
-        return view('pessoas.editar', compact('pessoas'));
+        return view('pessoas.editar', compact('pessoa'));
     }
 
     /**
