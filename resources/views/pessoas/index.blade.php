@@ -31,7 +31,7 @@
                                 <td>{{ $pessoa->niver }}</td>
                                 <td>{{ $pessoa->data_membro }}</td>
                                 <td class="d-flex">
-                                    <a href="{{ route('pessoas.edit', [$pessoa->id]) }}">
+                                    <a href="{{ route('pessoas.edit', $pessoa->id) }}">
                                         <button class="btn-editar"><i class="fas fa-edit"></i></button>
                                     </a>
                                     <form action="{{ route('pessoas.destroy', ['pessoa' => $pessoa->id]) }}"

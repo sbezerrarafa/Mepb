@@ -6,7 +6,6 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class BaseRequest extends FormRequest
 {
-  
     public function authorize()
     {
         return true;
@@ -16,8 +15,7 @@ class BaseRequest extends FormRequest
     {
         return [
             'nome.required' => 'Insira um Nome',
-            'niver.required'=> 'Insira a Data de Aniversário'
-            
+            'niver.required' => 'Insira a Data de Aniversário'
         ];
     }
 }

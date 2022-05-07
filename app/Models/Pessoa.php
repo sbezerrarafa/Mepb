@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Pessoa extends Model
 {
     use HasFactory;
-    protected $table='pessoas';
+    
+    protected $table = 'pessoas';
 
     protected $fillable = [
-
         'nome',
         'endereco',
         'tell',
@@ -24,6 +24,5 @@ class Pessoa extends Model
         'casado_com',
         'niver_casamento',
         'tipo',
-
     ];
 }
