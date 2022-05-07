@@ -17,7 +17,7 @@ class PessoaController extends Controller
     public function index()
     {
         $pessoas = Pessoa::orderBy('nome')->paginate(1000);
-        
+
         return view($this->bladePath, compact('pessoas'));
     }
 
@@ -39,11 +39,12 @@ class PessoaController extends Controller
      */
     public function store(PessoaRequest $request)
     {
-       $pessoas = Pessoa::create($request->validated());
+        Pessoa::create($request->validated());
+
         return $this->redirectStoreSuccess($this->bladePath);
     }
 
-   
+
     /**
      * Display the specified resource.
      *
@@ -62,15 +63,14 @@ class PessoaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-
     {
         $pessoas = Pessoa::find($id);
-     
-        if(!$pessoas){
+
+        if (!$pessoas) {
             return $this->redirectNotFound($this->bladePath);
         }
-            return view('pessoas.editar',compact('pessoas'));
-        
+
+        return view('pessoas.editar', compact('pessoas'));
     }
 
     /**
@@ -80,14 +80,17 @@ class PessoaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id )
+    public function update($id)
     {
         $pessoa = Pessoa::find($id);
-        if(!$pessoa){
+
+        if (!$pessoa) {
             return $this->redirectNotFound($this->bladePath);
         }
+
         $pessoa->update();
-        return $this-> redirectUpdatedSuccess($this->bladePath);
+
+        return $this->redirectUpdatedSuccess($this->bladePath);
     }
 
     /**
@@ -99,10 +102,13 @@ class PessoaController extends Controller
     public function destroy($id)
     {
         $pessoa = Pessoa::find($id);
-        if(!$pessoa){
+
+        if (!$pessoa) {
             return $this->redirectNotFound($this->bladePath);
         }
+
         $pessoa->delete();
-        return $this-> redirectRemovedSuccess($this->bladePath);
+
+        return $this->redirectRemovedSuccess($this->bladePath);
     }
 }
