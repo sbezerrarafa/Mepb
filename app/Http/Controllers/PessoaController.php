@@ -80,7 +80,7 @@ class PessoaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(PessoaRequest $request, $id)
     {
         $pessoa = Pessoa::find($id);
 
@@ -88,7 +88,7 @@ class PessoaController extends Controller
             return $this->redirectNotFound($this->bladePath);
         }
 
-        $pessoa->update();
+        $pessoa->update($request->validated());
 
         return $this->redirectUpdatedSuccess($this->bladePath);
     }
