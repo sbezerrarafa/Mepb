@@ -3,10 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PessoaController;
+use Illuminate\Support\Facades\Auth;
 
 Auth::routes([
     'register' => true
 ]);
+
 Route::get('/', function () {
     return view('auth.login');
 });
