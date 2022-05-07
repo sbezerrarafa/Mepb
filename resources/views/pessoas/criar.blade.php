@@ -5,6 +5,7 @@
 
 @section('content')
 
+
 <section class="container-cadastro">
     <div class="logo-canto">
       <img src="{{ asset('images/logo-igreja.png') }}" alt="logo">
@@ -46,11 +47,11 @@
       <div class="form-row mt-3">
         <div class="form-group col-md-6">
           <label for="inputPassword4">Data de Nascimento</label>
-          <input name="niver" type="date" class="form-control" id="data-membro">
+          <input name="niver" type="text" class="form-control" id="data-niver">
         </div>
         <div class="form-group col-md-6">
           <label for="inputPassword4">Membro Desde de:</label>
-          <input name="data_membro" type="date" class="form-control" id="data-membro">
+          <input name="data_membro" type="text" class="form-control" id="data-membro">
         </div>
       </div>
 
@@ -71,23 +72,23 @@
         </div>
         <div class="form-group col-md-3">
           <label for="Observações">Aniversário Casamento</label>
-          <input name="niver_casamento" type="date" class="form-control" id="data-membro">
+          <input name="niver_casamento" type="text" class="form-control" id="data-membro">
         </div>
       </div>
     <div class="d-flex " style="gap:15px;">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault1" checked value="membros">
+          <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault1" checked value="0">
           <label class="form-check-label" for="flexRadioDefault1">
           Membros
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault2" value="visitante" >
+          <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault2" value="1" >
           <label class="form-check-label" for="flexRadioDefault2">
           Visitante
           </label>
         </div>
-      </div>
+      </div> 
       <div class="btns-formulario">
         <button type="submit" class="btn btn-cancelar">Cancelar</button>
         <button type="submit" class="btn btn-salvar">Salvar</button>

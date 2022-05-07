@@ -21,11 +21,11 @@ class CreatePessoasTable extends Migration
             $table->string('redes_sociais');
             $table->string('membro_igreja');
             $table->string('imagem');
-            $table->date('niver');
-            $table->date('data_membro');
+            $table->string('niver');
+            $table->string('data_membro');
             $table->string('observacoes');
             $table->string('casado_com');
-            $table->date('niver_casamento');
+            $table->string('niver_casamento');
             $table->boolean('tipo');
             $table->timestamps();
             $table->softDeletes();

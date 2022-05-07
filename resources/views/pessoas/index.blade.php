@@ -21,74 +21,31 @@
               <th scope="col">Ações</th>
             </tr>
           </thead>
-          <tbody>
-
+             
+<tbody>
+        @foreach($pessoas as $pessoa)
             <tr>
               <td width="1%">
                 <img class="img-fluid z-depth-1 " src="/img/rafa.jpg" />
               </td>
-              <td>Rafael Bezerra</td>
-              <td>16/09/1993</td>
-              <td>16/09/2019</td>
+              <td>{{ $pessoa->nome }}</td>
+              <td>{{ $pessoa->niver }}</td>
+              <td>{{ $pessoa->data_membro }}</td>
+            
 
-              <td>
-                <button class="btn-editar"><i class="fas fa-edit"></i></button>
-                <button class="btn-exluir"><i class="fas fa-trash-alt"></i></button>
+              <td class="d-flex">
+                <a href="/pessoas/{{ $pessoa->id }}/edit">
+                  <button class="btn-editar"><i class="fas fa-edit"></i></button>
+                </a>
+                <form action="{{ route('pessoas.destroy',['pessoa' => $pessoa->id]) }}" method="POST">
+                    @csrf
+                    @method('delete')
+                    <button  class="btn-exluir"><i class="fas fa-trash-alt"></i></button>
+</form>
+                                         
               </td>
             </tr>
-            <tr>
-              <td width="1%">
-                <img class="img-fluid z-depth-1 " src="/img/rafa.jpg" />
-              </td>
-              <td>Rafael Bezerra</td>
-              <td>16/09/1993</td>
-              <td>16/09/2019</td>
-
-              <td>
-                <button class="btn-editar"><i class="fas fa-edit"></i></button>
-                <button class="btn-exluir"><i class="fas fa-trash-alt"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td width="1%">
-                <img class="img-fluid z-depth-1 " src="/img/rafa.jpg" />
-              </td>
-              <td>Rafael Bezerra</td>
-              <td>16/09/1993</td>
-              <td>16/09/2019</td>
-
-              <td>
-                <button class="btn-editar"><i class="fas fa-edit"></i></button>
-                <button class="btn-exluir"><i class="fas fa-trash-alt"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td width="1%">
-                <img class="img-fluid z-depth-1 " src="/img/rafa.jpg" />
-              </td>
-              <td>Rafael Bezerra</td>
-              <td>16/09/1993</td>
-              <td>16/09/2019</td>
-
-              <td>
-                <button class="btn-editar"><i class="fas fa-edit"></i></button>
-                <button class="btn-exluir"><i class="fas fa-trash-alt"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td width="1%">
-                <img class="img-fluid z-depth-1 " src="/img/rafa.jpg" />
-              </td>
-              <td>Rafael Bezerra</td>
-              <td>16/09/1993</td>
-              <td>16/09/2019</td>
-
-              <td>
-                <button class="btn-editar"><i class="fas fa-edit"></i></button>
-                <button class="btn-exluir"><i class="fas fa-trash-alt"></i></button>
-              </td>
-            </tr>
-
+           @endforeach
           </tbody>
         </table>
       </div>

@@ -11,7 +11,7 @@ class Pessoa extends Model
     protected $table='pessoas';
 
     protected $fillable = [
-        'id',
+
         'nome',
         'endereco',
         'tell',
@@ -24,7 +24,6 @@ class Pessoa extends Model
         'casado_com',
         'niver_casamento',
         'tipo',
+
     ];
 }
-
-         

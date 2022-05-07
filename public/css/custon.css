@@ -323,3 +323,18 @@ a:active {
         align-items: center;
     }
 }
+
+/* area de alerta */
+
+.flash-message {
+    display: flex;
+    justify-content: end;
+    margin: 20px 10px;
+}
+.flash-message p {
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    align-items: center;
+    height: 100px;
+}
