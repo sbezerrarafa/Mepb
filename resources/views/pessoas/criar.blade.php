@@ -6,7 +6,9 @@
 @section('content')
     <section class="container-cadastro">
         <div class="logo-canto">
-            <img src="{{ asset('images/logo-igreja.png') }}" alt="logo">
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('images/logo-igreja.png') }}" alt="logo">
+            </a>
         </div>
         <h2>Cadastro</h2>
         <form action="{{ route('pessoas.store') }}" method="POST">
@@ -76,17 +78,21 @@
                 </div>
             </div>
             <div class="d-flex " style="gap:15px;">
+           
+
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault1" checked value="0">
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="tipo" value="0">
+                    <label class="form-check-label" for="gridCheck">
                         Membros
                     </label>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="tipo" id="flexRadioDefault2" value="1">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Visitante
-                    </label>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tipo" value="1">   
+                        <label class="form-check-label" for="gridCheck">
+                            Visitante
+                        </label>
+                    </div>
                 </div>
             </div>
             <div class="btns-formulario">

@@ -39,6 +39,16 @@ class PessoaController extends Controller
      */
     public function store(PessoaRequest $request)
     {
+        $input = $request->all();
+
+        if ($image = $request->file('imagem')) {
+            $destinationPath = 'image/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['imagem'] = "$profileImage";
+        }
+
+
         Pessoa::create($request->validated());
 
         return $this->redirectStoreSuccess($this->bladePath);
