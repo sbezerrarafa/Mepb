@@ -2,13 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-
-class Pessoa extends Model
+class Pessoa extends BaseModel
 {
-    use HasFactory;
-    
     protected $table = 'pessoas';
 
     protected $fillable = [
@@ -25,4 +20,9 @@ class Pessoa extends Model
         'niver_casamento',
         'tipo',
     ];
+
+    public function setImagemAttribute($value)
+    {       
+        $this->attributes['imagem'] = $this->imagemUpload($value);
+    }
 }

@@ -11,7 +11,7 @@
             </a>
         </div>
         <h2>Cadastro</h2>
-        <form action="{{ route('pessoas.store') }}" method="POST">
+        <form action="{{ route('pessoas.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-row">
                 <div class="col-md-6">
@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div class="d-flex " style="gap:15px;">
-           
+
 
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="tipo" value="0">
@@ -88,7 +88,7 @@
                 </div>
                 <div class="form-group">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="tipo" value="1">   
+                        <input class="form-check-input" type="radio" name="tipo" value="1">
                         <label class="form-check-label" for="gridCheck">
                             Visitante
                         </label>
