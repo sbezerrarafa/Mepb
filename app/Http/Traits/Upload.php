@@ -18,7 +18,7 @@ trait Upload
 
             $nomeImagem = "{$name}.{$extensao}";
 
-            $upload = $imagem->move(public_path('storage/exercises'), $nomeImagem);
+            $upload = $imagem->move(public_path('storage/pessoas'), $nomeImagem);
 
             if (!$upload) {
                 return redirect()->back()->with('error', 'Falha ao fazer upload')->withInput();
