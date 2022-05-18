@@ -2,8 +2,6 @@
 
 namespace App\Http\Traits;
 
-use Illuminate\Support\Facades\Storage;
-
 trait Upload
 {
     public function imagemUpload($imagem)
@@ -23,6 +21,8 @@ trait Upload
             if (!$upload) {
                 return redirect()->back()->with('error', 'Falha ao fazer upload')->withInput();
             }
+
+            return $nomeImagem;
         }
     }
 }

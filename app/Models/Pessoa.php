@@ -21,8 +21,17 @@ class Pessoa extends BaseModel
         'tipo',
     ];
 
+    protected $appends = [
+        'imagem',
+    ];
+
     public function setImagemAttribute($value)
-    {       
+    {
         $this->attributes['imagem'] = $this->imagemUpload($value);
+    }
+
+    public function getImagemAttribute($value)
+    {
+        return asset('storage/pessoas/' . $value);
     }
 }

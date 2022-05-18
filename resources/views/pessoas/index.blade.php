@@ -20,12 +20,11 @@
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
-
                     <tbody>
                         @foreach ($pessoas as $pessoa)
                             <tr>
                                 <td width="1%">
-                                    <img class="img-fluid z-depth-1 " src="/image/{{ $pessoa->imagem }}" />
+                                    <img class="img-fluid z-depth-1" src="{{ $pessoa->imagem }}" />
                                 </td>
                                 <td>{{ $pessoa->nome }}</td>
                                 <td>{{ $pessoa->niver }}</td>
