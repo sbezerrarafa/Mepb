@@ -1,6 +1,5 @@
 @extends('layouts.master')
 
-
 @section('title', 'Cadastro')
 
 @section('content')
@@ -50,11 +49,11 @@
             <div class="form-row mt-3">
                 <div class="form-group col-md-6">
                     <label for="inputPassword4">Data de Nascimento</label>
-                    <input name="niver" type="text" class="form-control" id="data-niver">
+                    <input name="niver" type="text" class="form-control datetimepicker">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputPassword4">Membro Desde de:</label>
-                    <input name="data_membro" type="text" class="form-control" id="data-membro">
+                    <input name="data_membro" type="text" class="form-control datetimepicker" id="data-membro">
                 </div>
             </div>
             <div class="form-row">
@@ -74,12 +73,10 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="Observações">Aniversário Casamento</label>
-                    <input name="niver_casamento" type="text" class="form-control" id="data-membro">
+                    <input name="niver_casamento" type="text" class="form-control datetimepicker" id="data-membro">
                 </div>
             </div>
             <div class="d-flex " style="gap:15px;">
-
-
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="tipo" value="0">
                     <label class="form-check-label" for="gridCheck">
@@ -105,4 +102,17 @@
 
 @section('js')
     {!! JsValidator::formRequest('App\Http\Requests\PessoaRequest') !!}
+
+    <script type="text/javascript">
+        $(function() {
+            $('.datetimepicker').datepicker({
+                format: "dd/mm/yyyy",
+                weekStart: 0,
+                calendarWeeks: true,
+                autoclose: true,
+                todayHighlight: true,
+                orientation: "auto"
+            });
+        });
+    </script>
 @endsection
