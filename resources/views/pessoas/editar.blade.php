@@ -9,7 +9,7 @@
             <img src="{{ asset('images/logo-igreja.png') }}" alt="logo">
         </div>
         <h2>Cadastro</h2>
-        <form action="{{ route('pessoas.update', $pessoa->id) }}" method="POST">
+        <form action="{{ route('pessoas.update', $pessoa->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="form-row">
@@ -43,8 +43,8 @@
                 <div class="col-md-6">
                     <label for="">Foto</label>
                     <div class="box-imagens">
-                   
-                        <img id="img-usuario"  src="/image/{{ $pessoa->imagem }}" alt="Imagem-demonstração"
+
+                        <img id="img-usuario" src="/image/{{ $pessoa->imagem }}" alt="Imagem-demonstração"
                             value="{{ $pessoa->imagem }}" />
                     </div>
                     <input type="file" name="imagem" id="edit_image" capture="user" onchange="readURL(this);">
