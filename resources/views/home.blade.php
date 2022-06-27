@@ -35,6 +35,6 @@
                 <button class="btn btn-card">Ver Todos</button>
             </div>
         </section>
-        <a class="adicionar-user" href="{{ route('usuarios.create') }}">{{ __('Register') }}</a>
+        <a class="adicionar-user" href="{{ route('usuarios.create') }}">Registrar</a>
     </section>
 @endsection
