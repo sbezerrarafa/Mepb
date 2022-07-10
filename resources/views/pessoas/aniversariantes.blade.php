@@ -29,7 +29,7 @@
                                             alt="não tem imagem">
                                     @else
                                         <img class="img-fluid z-depth-1"
-                                            src="{{ asset('storage/pessoas/' . $membro->imagem) }}" />
+                                            src="{{ asset('storage/pessoas/' . $aniversariante->imagem) }}" />
                                     @endif
                                 </td>
                                 <td>{{ $aniversariante->nome }}</td>
