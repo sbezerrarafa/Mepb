@@ -64,11 +64,11 @@
                 <div class="form-group col-md-3">
                     <label for="Observações">Casado(A) com:</label>
                     <select name="casado_com" class="form-control" id="exampleFormControlSelect1">
-                        <option>rafael</option>
-                        <option>maria</option>
-                        <option>pedro</option>
-                        <option>joão</option>
-                        <option>igor</option>
+                      @foreach($pessoas as  $pessoa)
+                        <option>
+                                {{ $pessoa->nome}}
+                        </option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="form-group col-md-3">

@@ -37,7 +37,9 @@ class PessoaController extends Controller
      */
     public function create()
     {
-        return view('pessoas.criar');
+        $pessoas = Pessoa::all();
+        return view('pessoas.criar',compact('pessoas'));
+
     }
 
     /**
@@ -47,7 +49,9 @@ class PessoaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(PessoaRequest $request)
+    
     {
+        
         Pessoa::create($request->validated());
 
         return $this->redirectStoreSuccess($this->bladePath);

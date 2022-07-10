@@ -5,7 +5,7 @@
 @section('content')
     <section class="tabela-membros">
         <div class="topo-tabelas">
-            <h3>Membros</h3>
+            <h3>Visitantes</h3>
             <button class="btn btn-voltar"><a href="{{ route('home') }}">voltar</a></button>
         </div>
         <div class="card">
