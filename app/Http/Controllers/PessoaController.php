@@ -7,7 +7,7 @@ use App\Http\Requests\PessoaRequest;
 
 class PessoaController extends Controller
 {
-    private string $bladePath = 'pessoas.index';
+    private string $bladePath = 'home';
     /**
      * Display a listing of the resource.
      *
