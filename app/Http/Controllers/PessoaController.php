@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Pessoa;
 use App\Http\Requests\PessoaRequest;
 
@@ -14,11 +13,21 @@ class PessoaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function membro()
     {
-        $pessoas = Pessoa::orderBy('nome')->paginate(1000);
+        $membros = Pessoa::filterMembro();
+        return view('pessoas.membros', compact('membros'));
+    }
 
-        return view($this->bladePath, compact('pessoas'));
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function visitante()
+    {
+        $visitantes = Pessoa::filterVisitante();
+        return view('pessoas.visitantes', compact('visitantes'));
     }
 
     /**

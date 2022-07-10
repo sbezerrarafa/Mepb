@@ -22,12 +22,16 @@
             <div class="card visitantes-total">
                 <h3>Total de Vistantes Cadastrados</h3>
                 <p>58</p>
-                <button class="btn btn-card">Ver Todos</button>
+                <button class="btn btn-card">
+                    <a href="{{ route('pessoas.visitantes') }}">Ver Todos</a>
+                </button>
             </div>
             <div class="card total-membros ">
                 <h3>Total de Membros Cadastrados</h3>
                 <p>302</p>
-                <button class="btn btn-card"><a href="membros.html">Ver Todos</a></button>
+                <button class="btn btn-card">
+                    <a href="{{ route('pessoas.membros') }}">Ver Todos</a>
+                </button>
             </div>
             <div class="card aniversariantes-mes">
                 <h3>Aniversáriantes do Mês</h3>
