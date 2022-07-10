@@ -29,9 +29,4 @@ class Pessoa extends BaseModel
     {
         $this->attributes['imagem'] = $this->imagemUpload($value);
     }
-
-    public function getImagemAttribute($value)
-    {
-        return asset('storage/pessoas/' . $value);
-    }
 }

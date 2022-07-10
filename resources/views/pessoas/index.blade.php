@@ -24,11 +24,13 @@
                         @foreach ($pessoas as $pessoa)
                             <tr>
                                 <td width="1%">
-                                    @if ($pessoa["imagem"] == "http://127.0.0.1:8000/storage/pessoas")
-                                    <img  class="img-fluid z-depth-1" src="{{ asset('images/ovelhinha.jpg') }}" alt="não tem imagem">
-                                    @else 
-                                    <img class="img-fluid z-depth-1" src="{{ $pessoa->imagem }}" />
-                                    @endif   
+                                    @if ($pessoa->imagem == null)
+                                        <img class="img-fluid z-depth-1" src="{{ asset('images/ovelhinha.jpg') }}"
+                                            alt="não tem imagem">
+                                    @else
+                                        <img class="img-fluid z-depth-1"
+                                            src="{{ asset('storage/pessoas/' . $pessoa->imagem) }}" />
+                                    @endif
                                 </td>
                                 <td>{{ $pessoa->nome }}</td>
                                 <td>{{ $pessoa->niver }}</td>
