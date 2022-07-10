@@ -15,7 +15,7 @@ class PessoaController extends Controller
      */
     public function membro()
     {
-        $membros = Pessoa::filterMembro();
+        $membros = Pessoa::filterAniversariante();
         return view('pessoas.membros', compact('membros'));
     }
 

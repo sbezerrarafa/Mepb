@@ -35,7 +35,7 @@
             </div>
             <div class="card aniversariantes-mes">
                 <h3>Aniversáriantes do Mês</h3>
-                <p>5</p>
+                <p>{{ $aniversariantes }}</p>
                 <button class="btn btn-card">Ver Todos</button>
             </div>
         </section>
