@@ -25,8 +25,6 @@ class HomeController extends Controller
     public function index()
     {
         $aniversariantes = Pessoa::filterAniversariante()->count();
-    
-
         return view('home', compact('aniversariantes'));
     }
 }
