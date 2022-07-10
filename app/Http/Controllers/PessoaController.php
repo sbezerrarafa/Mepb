@@ -30,6 +30,13 @@ class PessoaController extends Controller
         return view('pessoas.visitantes', compact('visitantes'));
     }
 
+    public function aniversariante()
+    {
+        $aniversariantes = Pessoa::filterAniversariante();
+        return view('pessoas.aniversariantes', compact('aniversariantes'));
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *

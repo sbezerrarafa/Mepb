@@ -28,7 +28,7 @@
             </div>
             <div class="card total-membros ">
                 <h3>Total de Membros Cadastrados</h3>
-                <p>302</p>
+                <p>205</p>
                 <button class="btn btn-card">
                     <a href="{{ route('pessoas.membros') }}">Ver Todos</a>
                 </button>
