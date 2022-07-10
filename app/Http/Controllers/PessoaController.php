@@ -15,7 +15,7 @@ class PessoaController extends Controller
      */
     public function membro()
     {
-        $membros = Pessoa::filterMembro();
+        $membros = Pessoa::filterAniversariante();
         return view('pessoas.membros', compact('membros'));
     }
 
@@ -49,24 +49,9 @@ class PessoaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(PessoaRequest $request)
-    
     {
-        
         Pessoa::create($request->validated());
-
         return $this->redirectStoreSuccess($this->bladePath);
-    }
-
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**
@@ -78,7 +63,6 @@ class PessoaController extends Controller
     public function edit($id)
     {
         $pessoa = Pessoa::find($id);
-
         if (!$pessoa) {
             return $this->redirectNotFound($this->bladePath);
         }
@@ -96,13 +80,11 @@ class PessoaController extends Controller
     public function update(PessoaRequest $request, $id)
     {
         $pessoa = Pessoa::find($id);
-
         if (!$pessoa) {
             return $this->redirectNotFound($this->bladePath);
         }
 
         $pessoa->update($request->validated());
-
         return $this->redirectUpdatedSuccess($this->bladePath);
     }
 
@@ -115,13 +97,11 @@ class PessoaController extends Controller
     public function destroy($id)
     {
         $pessoa = Pessoa::find($id);
-
         if (!$pessoa) {
             return $this->redirectNotFound($this->bladePath);
         }
 
         $pessoa->delete();
-
         return $this->redirectRemovedSuccess($this->bladePath);
     }
 }

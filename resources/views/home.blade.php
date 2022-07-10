@@ -23,14 +23,14 @@
                 <h3>Total de Vistantes Cadastrados</h3>
                 <p>58</p>
                 <button class="btn btn-card">
-                    <a href="{{ route('pessoas.visitantes') }}">Ver Todos</a>
+                    <a href="{{ route('pessoas.visitante') }}">Ver Todos</a>
                 </button>
             </div>
             <div class="card total-membros ">
                 <h3>Total de Membros Cadastrados</h3>
                 <p>302</p>
                 <button class="btn btn-card">
-                    <a href="{{ route('pessoas.membros') }}">Ver Todos</a>
+                    <a href="{{ route('pessoas.membro') }}">Ver Todos</a>
                 </button>
             </div>
             <div class="card aniversariantes-mes">

@@ -20,7 +20,6 @@ class UsuarioController extends Controller
     public function index()
     {
         $users = User::orderBy('name')->paginate(10);
-
         return view($this->bladePath, compact('users'));
     }
 
@@ -43,7 +42,6 @@ class UsuarioController extends Controller
     public function store(UsuarioRequest $request)
     {
         User::create($request->validated());
-
         return $this->redirectStoreSuccess($this->routePath);
     }
 
