@@ -36,10 +36,10 @@
                                 <td>{{ $visitante->niver }}</td>
                                 <td>{{ $visitante->data_membro }}</td>
                                 <td class="d-flex">
-                                    <a href="{{ route('pessoas.edit', $visitante->id) }}">
+                                    <a href="{{ route('pessoas.editar', $visitante->id) }}">
                                         <button class="btn-editar"><i class="fas fa-edit"></i></button>
                                     </a>
-                                    <form action="{{ route('pessoas.destroy', ['pessoa' => $visitante->id]) }}"
+                                    <form action="{{ route('pessoas.delete', ['pessoa' => $visitante->id]) }}"
                                         method="POST">
                                         @csrf
                                         @method('delete')

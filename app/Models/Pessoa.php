@@ -60,4 +60,17 @@ class Pessoa extends BaseModel
 
         return $aniversariantesDoMes;
     }
+
+    public function scopeFilterVisitanteSemana()
+        {
+            $ultimasVisitas = Pessoa::whereBetween(
+                'created_at',
+                [
+                    date('Y-m-d', strtotime("-7 days")) . " 00:00:00",
+                    date("Y-m-d") . " 23:59:59"
+                ]
+            )
+            ->where('tipo', TipoPessoa::VISITANTE);
+           
+        }     
 }

@@ -41,6 +41,13 @@ class PessoaController extends Controller
         return view('pessoas.aniversariantes', compact('aniversariantes'));
     }
 
+    public function ultimoVisitante()
+    {  
+        $ultimosVisitantes = Pessoa::FilterVisitanteSemana();
+    }
+
+
+
     /**
      * Show the form for creating a new resource.
      *
