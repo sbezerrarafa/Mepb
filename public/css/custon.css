@@ -119,6 +119,24 @@ a:active {
     font-size: 60px;
 }
 
+/* area de cadastro de pessoas */
+
+.btn-foto {
+    display: flex;
+    justify-content: end;
+}
+.btn-foto label {
+    padding: 10px;
+    background: #4e4e4e;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-foto input {
+    display: none;
+}
+
 .btn-card {
     position: absolute;
     width: 101px;
@@ -128,6 +146,12 @@ a:active {
     background: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
 }
+
+/* pag visitante */
+.title-visitante {
+    color: #0c7697 !important;
+}
+
 .visitantes-semana {
     background: linear-gradient(321.69deg, #f84b75 0%, #ffb199 100%);
 }
@@ -292,13 +316,37 @@ a:active {
 }
 
 /* tabela aniversariante */
+.title-anivesariantes {
+    color: #d01f1f !important;
+}
+
 .btn-classificacao {
     font-weight: 700;
     color: white;
     background: darksalmon;
 }
-.adulto {
+.adulto,
+.crianca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adulto p,
+.crianca p {
+    color: white;
+    padding: 10px 60px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    font-weight: bold;
+}
+.adulto p {
     background: cornflowerblue;
+}
+.crianca p {
+    background: #e76217;
 }
 
 .tabela-aniversariante {

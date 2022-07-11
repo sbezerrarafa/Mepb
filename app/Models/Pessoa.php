@@ -26,6 +26,7 @@ class Pessoa extends BaseModel
 
     protected $appends = [
         'imagem',
+        'niverFaixa',
     ];
 
     public function setImagemAttribute($value)
@@ -38,9 +39,10 @@ class Pessoa extends BaseModel
         $this->attributes['niver'] = Carbon::createFromFormat('d/m/Y', $value)->format('Y-m-d');
     }
 
-    public function getNiverAttribute($value)
+    public function getNiverFaixaAttribute($value)
     {
-        return Carbon::createFromFormat('Y-m-d', $value)->format('d/m/Y');
+        $atributo = $this->attributes['niver'];
+        return Carbon::parse($atributo)->age;
     }
 
     public function scopeFilterMembro($query)
@@ -73,4 +75,17 @@ class Pessoa extends BaseModel
             ->where('tipo', TipoPessoa::VISITANTE);
            
         }     
+
+        // public function scopeCalculaIdade($value)
+        // {
+            // $pessoas = Pessoa::all();
+
+            // foreach($pessoas as $pessoa){
+                // return Carbon::parse($value)->age;
+            //     dd($result);
+            // }
+            // $aqui = Carbon::parse($niver->niver)->age;
+        
+            // dd($aqui);
+        // }
 }

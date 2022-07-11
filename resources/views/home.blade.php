@@ -17,7 +17,9 @@
             <div class="card  visitantes-semana">
                 <h3>Visitantes da Última Semana</h3>
                 <p>{{ $totalVisitantesSemana }}</p>
-                <button class="btn btn-card">Ver Todos</button>
+                <button class="btn btn-card">
+                    <a href="{{ route('pessoas.visitante') }}">Ver Todos</a>
+                </button>
             </div>
             <div class="card visitantes-total">
                 <h3>Total de Vistantes Cadastrados</h3>

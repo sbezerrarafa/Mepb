@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pessoa;
 use App\Http\Requests\PessoaRequest;
+use Carbon\Carbon;
 
 class PessoaController extends Controller
 {
@@ -45,7 +46,6 @@ class PessoaController extends Controller
     {  
         $ultimosVisitantes = Pessoa::FilterVisitanteSemana();
     }
-
 
 
     /**
@@ -122,4 +122,7 @@ class PessoaController extends Controller
         $pessoa->delete();
         return $this->redirectRemovedSuccess($this->bladePath);
     }
+
+ 
+
 }

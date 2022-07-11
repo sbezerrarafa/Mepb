@@ -3,9 +3,10 @@
 @section('title', 'Membros')
 
 @section('content')
+
     <section class="tabela-membros">
         <div class="topo-tabelas">
-            <h3>Visitantes</h3>
+            <h3 class="title-visitante">Visitantes</h3>
             <button class="btn btn-voltar"><a href="{{ route('home') }}">voltar</a></button>
         </div>
         <div class="card">
@@ -16,12 +17,18 @@
                             <th scope="col">Foto</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Aniversário</th>
-                            <th scope="col">Membro</th>
+                            <th scope="col">Data da Visita</th>
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($visitantes as $visitante)
+                        
+                        <?php 
+                            $data_niver = strtotime($visitante->niver);
+                            $data_convertida_niver = date("d/m/Y", $data_niver);
+                        
+                        ?> 
                             <tr>
                                 <td width="1%">
                                     @if ($visitante->imagem == null)
@@ -33,8 +40,8 @@
                                     @endif
                                 </td>
                                 <td>{{ $visitante->nome }}</td>
-                                <td>{{ $visitante->niver }}</td>
-                                <td>{{ $visitante->data_membro }}</td>
+                                <td>{{ $data_convertida_niver }}</td>
+                                <td>{{ $visitante->created_at }}</td>
                                 <td class="d-flex">
                                     <a href="{{ route('pessoas.editar', $visitante->id) }}">
                                         <button class="btn-editar"><i class="fas fa-edit"></i></button>

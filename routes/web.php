@@ -21,6 +21,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/pessoas/visitantes', [PessoaController::class, 'visitante'])->name('pessoas.visitante');
     Route::get('/pessoas/aniversariantes', [PessoaController::class, 'aniversariante'])->name('pessoas.aniversariante');
     Route::get('/pessoas/ultimosvisitantes', [PessoaController::class, 'ultimoVisitante'])->name('pessoas.ultimovisitante');
+    Route::get('/pessoas/idades', [PessoaController::class, 'teste'])->name('pessoas.idade');
     Route::get('/pessoas/criar', [PessoaController::class, 'create'])->name('pessoas.criar');
     Route::post('/pessoas/store', [PessoaController::class, 'store'])->name('pessoas.store');
     Route::get('/pessoas/{pessoa}/editar', [PessoaController::class, 'edit'])->name('pessoas.editar');

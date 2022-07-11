@@ -43,7 +43,10 @@
                     <div class="box-imagens">
                         <img id="img-usuario" src="{{ asset('images/default-imagem.png') }}" alt="Imagem-demonstração" />
                     </div>
-                    <input type="file" name="imagem" id="edit_image" capture="user" onchange="readURL(this);">
+                    <div class="btn-foto">
+                        <label for="imagem">tirar foto <i class="fal fa-camera"></i></label>
+                        <input id="imagem" type="file" name="imagem" id="edit_image" capture="user" onchange="readURL(this);">
+                    </div>
                 </div>
             </div>
             <div class="form-row mt-3">
