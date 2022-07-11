@@ -63,7 +63,7 @@ class Pessoa extends BaseModel
 
     public function scopeFilterVisitanteSemana()
         {
-            $ultimasVisitas = Pessoa::whereBetween(
+          return  $ultimasVisitas = Pessoa::whereBetween(
                 'created_at',
                 [
                     date('Y-m-d', strtotime("-7 days")) . " 00:00:00",
