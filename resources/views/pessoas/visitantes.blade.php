@@ -27,6 +27,9 @@
                         <?php 
                             $data_niver = strtotime($visitante->niver);
                             $data_convertida_niver = date("d/m/Y", $data_niver);
+
+                            $data_criacao = strtotime($visitante->created_at);
+                            $data_visita = date("d/m/Y",  $data_criacao);
                         
                         ?> 
                             <tr>
@@ -41,7 +44,7 @@
                                 </td>
                                 <td>{{ $visitante->nome }}</td>
                                 <td>{{ $data_convertida_niver }}</td>
-                                <td>{{ $visitante->created_at }}</td>
+                                <td>{{ $data_visita }}</td>
                                 <td class="d-flex">
                                     <a href="{{ route('pessoas.editar', $visitante->id) }}">
                                         <button class="btn-editar"><i class="fas fa-edit"></i></button>

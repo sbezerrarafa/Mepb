@@ -24,6 +24,10 @@
                     <tbody>
                       
                         @foreach ($aniversariantes as $aniversariante)
+                        <?php 
+                            $data_niver = strtotime($aniversariante->niver);
+                            $data_convertida_niver = date("d/m/Y", $data_niver);
+                        ?> 
                             <tr>
                                 <td width="1%">
                                     @if ($aniversariante->imagem == null)
@@ -40,7 +44,7 @@
                                     @else
                                     <td class="crianca"><p>Criança</p></td>
                                 @endif
-                                <td>{{ $aniversariante->niver }}</td>
+                                <td>{{ $data_convertida_niver}}</td>
                                 <td>{{ $aniversariante->niver_casamento }}</td>
 
 
