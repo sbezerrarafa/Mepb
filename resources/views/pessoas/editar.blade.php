@@ -6,8 +6,11 @@
 @section('content')
     <section class="container-cadastro">
         <div class="logo-canto">
+        <a href="{{ route('home') }}">
             <img src="{{ asset('images/logo-igreja.png') }}" alt="logo">
+        </a>
         </div>
+        
         <h2>Cadastro</h2>
         <form action="{{ route('pessoas.update', $pessoa->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -69,13 +72,15 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="Observações">Casado(A) com:</label>
-                    <select class="form-control" name="casado_com" id="exampleFormControlSelect1"
-                        value="{{ $pessoa->casado_com }}">
-                        <option>rafael</option>
-                        <option>maria</option>
-                        <option>pedro</option>
-                        <option>joão</option>
-                        <option>igor</option>
+                  <?php // dd($pessoa->nome); ?>
+                    <select name="casado_com" class="form-control" id="exampleFormControlSelect1">
+                        <option selected >não é casado</option>
+                     @foreach($pessoa as $testanto)
+                        <option>
+                            <!-- aqui deve vim o nome das pessoas para selecionar -->
+                            oi
+                        </option>
+                       @endforeach
                     </select>
                 </div>
                 <div class="form-group col-md-3">

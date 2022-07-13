@@ -25,7 +25,7 @@
                     </div>
                     <div class="form-group">
                         <label for="telefone">Telefone</label>
-                        <input name="tell" class="form-control" type="text" id="telefone" placeholder="(xx) xxxxx-xxxx">
+                        <input name="tell" class="form-control" type="text" id="telefone" maxlength="15" placeholder="(xx) xxxxx-xxxx">
                     </div>
                     <div class="form-group ">
                         <label for="inputEmail4">Redes sociais</label>
@@ -68,6 +68,7 @@
                     <label for="Observações">Casado(A) com:</label>
                     <select name="casado_com" class="form-control" id="exampleFormControlSelect1">
                       @foreach($pessoas as  $pessoa)
+                      <option selected >não é casado</option>
                         <option>
                                 {{ $pessoa->nome}}
                         </option>
