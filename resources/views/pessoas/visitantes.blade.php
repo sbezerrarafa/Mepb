@@ -16,6 +16,7 @@
                         <tr>
                             <th scope="col">Foto</th>
                             <th scope="col">Nome</th>
+                            <th scope="col">Igreja</th>
                             <th scope="col">Aniversário</th>
                             <th scope="col">Data da Visita</th>
                             <th scope="col">Ações</th>
@@ -43,6 +44,11 @@
                                     @endif
                                 </td>
                                 <td>{{ $visitante->nome }}</td>
+                                    @if($visitante->membro_igreja != '')
+                                        <td>{{ $visitante->membro_igreja }}</td>
+                                    @else
+                                        <td>Sem igreja</td>
+                                    @endif
                                 <td>{{ $data_convertida_niver }}</td>
                                 <td>{{ $data_visita }}</td>
                                 <td class="d-flex">

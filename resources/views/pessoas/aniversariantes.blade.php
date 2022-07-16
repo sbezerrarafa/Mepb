@@ -45,9 +45,11 @@
                                     <td class="crianca"><p>Criança</p></td>
                                 @endif
                                 <td>{{ $data_convertida_niver}}</td>
-                                <td>{{ $aniversariante->niver_casamento }}</td>
-
-
+                                @if($aniversariante->niver_casamento != '')
+                                    <td>{{ $aniversariante->niver_casamento }}</td>
+                                @else
+                                    <td>Não é casado</td>   
+                                @endif     
                             </form>
                                 </td>
                             </tr>
