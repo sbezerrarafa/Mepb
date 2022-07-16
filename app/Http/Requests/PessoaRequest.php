@@ -16,9 +16,9 @@ class PessoaRequest extends BaseRequest
             'niver' => 'required|min:10',
             'data_membro' => 'min:10',
             'observacoes' => 'min:2',
-            'casado_com' => 'min:2',
             'niver_casamento' => 'min:10',
-            'tipo' => 'required|min:0,1'
+            'tipo' => 'required|min:0,1',
+            'casado_id' => 'exists:pessoas,id'
         ];
     }
 }

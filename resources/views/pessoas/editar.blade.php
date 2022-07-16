@@ -6,11 +6,11 @@
 @section('content')
     <section class="container-cadastro">
         <div class="logo-canto">
-        <a href="{{ route('home') }}">
-            <img src="{{ asset('images/logo-igreja.png') }}" alt="logo">
-        </a>
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('images/logo-igreja.png') }}" alt="logo">
+            </a>
         </div>
-        
+
         <h2>Cadastro</h2>
         <form action="{{ route('pessoas.update', $pessoa->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -29,8 +29,8 @@
                     </div>
                     <div class="form-group">
                         <label for="telefone">Telefone</label>
-                        <input class="form-control" type="text" id="telefone" name="tell" placeholder="(xx) xxxxx-xxxx"
-                            value="{{ $pessoa->tell }}">
+                        <input class="form-control" type="text" id="telefone" name="tell"
+                            placeholder="(xx) xxxxx-xxxx" value="{{ $pessoa->tell }}">
                     </div>
                     <div class="form-group ">
                         <label for="inputEmail4">Redes sociais</label>
@@ -56,7 +56,8 @@
             <div class="form-row mt-3">
                 <div class="form-group col-md-6">
                     <label for="inputPassword4">Data de Nascimento</label>
-                    <input type="string" class="form-control" name="niver" id="data-niver" value="{{ $pessoa->niver }}">
+                    <input type="string" class="form-control" name="niver" id="data-niver"
+                        value="{{ $pessoa->niver }}">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputPassword4">Membro Desde de:</label>
@@ -72,15 +73,13 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="Observações">Casado(A) com:</label>
-                  <?php // dd($pessoa->nome); ?>
-                    <select name="casado_com" class="form-control" id="exampleFormControlSelect1">
-                        <option selected >não é casado</option>
-                     @foreach($pessoa as $testanto)
-                        <option>
-                            <!-- aqui deve vim o nome das pessoas para selecionar -->
-                            oi
-                        </option>
-                       @endforeach
+                    <select name="casado_id" class="form-control" id="casado_id">
+                        <option selected>não é casado</option>
+                        @foreach ($pessoa as $pessoa)
+                            <option value="{{ $pessoa->id }}">
+                                {{ $pessoa->id == $pessoa->id ? 'selected' : '' }}>{{ $pessoa->name }}
+                            </option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="form-group col-md-3">
