@@ -84,8 +84,9 @@ class PessoaController extends Controller
         if (!$pessoa) {
             return $this->redirectNotFound($this->bladePath);
         }
+        $pessoas = Pessoa::all();
 
-        return view('pessoas.editar', compact('pessoa'));
+        return view('pessoas.editar', compact('pessoa','pessoas'));
     }
 
     /**
@@ -122,7 +123,5 @@ class PessoaController extends Controller
         $pessoa->delete();
         return $this->redirectRemovedSuccess($this->bladePath);
     }
-
- 
 
 }

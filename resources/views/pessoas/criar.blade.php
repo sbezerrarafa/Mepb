@@ -67,9 +67,9 @@
                 <div class="form-group col-md-3">
                     <label for="Observações">Casado(A) com:</label>
                     <select name="casado_com" class="form-control" id="exampleFormControlSelect1">
+                        <option selected >não é casado</option>
                       @foreach($pessoas as  $pessoa)
-                      <option selected >não é casado</option>
-                        <option>
+                        <option value="{{$item->nome}}">
                                 {{ $pessoa->nome}}
                         </option>
                         @endforeach

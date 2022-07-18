@@ -75,12 +75,11 @@
                   <?php // dd($pessoa->nome); ?>
                     <select name="casado_com" class="form-control" id="exampleFormControlSelect1">
                         <option selected >não é casado</option>
-                     @foreach($pessoa as $testanto)
-                        <option>
-                            <!-- aqui deve vim o nome das pessoas para selecionar -->
-                            oi
+                    @foreach($pessoas as $item)
+                        <option value="{{$item->nome}}" {{$item->nome == $pessoa->casado_com ? 'selected' : '' }}>
+                            {{$item->nome}}
                         </option>
-                       @endforeach
+                    @endforeach
                     </select>
                 </div>
                 <div class="form-group col-md-3">
