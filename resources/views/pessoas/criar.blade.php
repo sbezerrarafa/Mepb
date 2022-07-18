@@ -25,8 +25,7 @@
                     </div>
                     <div class="form-group">
                         <label for="telefone">Telefone</label>
-                        <input name="tell" class="form-control" type="text" id="telefone" maxlength="15"
-                            placeholder="(xx) xxxxx-xxxx">
+                        <input name="tell" class="form-control" type="text" id="telefone" maxlength="15" placeholder="(xx) xxxxx-xxxx">
                     </div>
                     <div class="form-group ">
                         <label for="inputEmail4">Redes sociais</label>
@@ -46,8 +45,7 @@
                     </div>
                     <div class="btn-foto">
                         <label for="imagem">tirar foto <i class="fal fa-camera"></i></label>
-                        <input id="imagem" type="file" name="imagem" id="edit_image" capture="user"
-                            onchange="readURL(this);">
+                        <input id="imagem" type="file" name="imagem" id="edit_image" capture="user" onchange="readURL(this);">
                     </div>
                 </div>
             </div>
@@ -68,12 +66,12 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="Observações">Casado(A) com:</label>
-                    <select name="casado_id" class="form-control" id="casado_id">
-                        <option selected>não é casado</option>
-                        @foreach ($pessoa as $pessoa)
-                            <option>
-                                {{ $pessoa->id == $pessoa->id }}>{{ $pessoa->name }}
-                            </option>
+                    <select name="casado_com" class="form-control" id="exampleFormControlSelect1">
+                      @foreach($pessoas as  $pessoa)
+                      <option selected >não é casado</option>
+                        <option>
+                                {{ $pessoa->nome}}
+                        </option>
                         @endforeach
                     </select>
                 </div>

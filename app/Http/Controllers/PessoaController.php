@@ -68,8 +68,7 @@ class PessoaController extends Controller
      */
     public function store(PessoaRequest $request)
     {
-        $pessoa = Pessoa::create($request->validated());
-        $pessoa->casados()->attach($request->casado_id);
+        Pessoa::create($request->validated());
         return $this->redirectStoreSuccess($this->bladePath);
     }
 

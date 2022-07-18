@@ -19,6 +19,7 @@ class Pessoa extends BaseModel
         'niver',
         'data_membro',
         'observacoes',
+        'casado_com',
         'niver_casamento',
         'tipo',
     ];
@@ -44,11 +45,6 @@ class Pessoa extends BaseModel
         return Carbon::parse($atributo)->age;
     }
 
-    public function casado()
-    {
-        return $this->hasOne(Pessoa::class);
-    }
-
     public function scopeFilterMembro($query)
     {
         return $query->where('tipo', TipoPessoa::MEMBRO)->orderBy('nome')->paginate(10);
@@ -68,27 +64,28 @@ class Pessoa extends BaseModel
     }
 
     public function scopeFilterVisitanteSemana()
-    {
-        return  $ultimasVisitas = Pessoa::whereBetween(
-            'created_at',
-            [
-                date('Y-m-d', strtotime("-7 days")) . " 00:00:00",
-                date("Y-m-d") . " 23:59:59"
-            ]
-        )
+        {
+          return  $ultimasVisitas = Pessoa::whereBetween(
+                'created_at',
+                [
+                    date('Y-m-d', strtotime("-7 days")) . " 00:00:00",
+                    date("Y-m-d") . " 23:59:59"
+                ]
+            )
             ->where('tipo', TipoPessoa::VISITANTE);
-    }
+           
+        }     
 
-    // public function scopeCalculaIdade($value)
-    // {
-    // $pessoas = Pessoa::all();
+        // public function scopeCalculaIdade($value)
+        // {
+            // $pessoas = Pessoa::all();
 
-    // foreach($pessoas as $pessoa){
-    // return Carbon::parse($value)->age;
-    //     dd($result);
-    // }
-    // $aqui = Carbon::parse($niver->niver)->age;
-
-    // dd($aqui);
-    // }
+            // foreach($pessoas as $pessoa){
+                // return Carbon::parse($value)->age;
+            //     dd($result);
+            // }
+            // $aqui = Carbon::parse($niver->niver)->age;
+        
+            // dd($aqui);
+        // }
 }
