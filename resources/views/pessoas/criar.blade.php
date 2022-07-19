@@ -68,8 +68,8 @@
                     <label for="Observações">Casado(A) com:</label>
                     <select name="casado_com" class="form-control" id="exampleFormControlSelect1">
                         <option selected >não é casado</option>
-                      @foreach($pessoas as  $pessoa)
-                        <option value="{{$item->nome}}">
+                      @foreach($pessoas as $pessoa)
+                        <option value="{{$pessoa->nome}}">
                                 {{ $pessoa->nome}}
                         </option>
                         @endforeach
