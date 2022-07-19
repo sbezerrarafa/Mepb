@@ -24,6 +24,7 @@ class CreatePessoasTable extends Migration
             $table->string('niver');
             $table->string('data_membro');
             $table->string('observacoes');
+            $table->string('casado_com');
             $table->string('niver_casamento');
             $table->boolean('tipo')->comment('0 - Membro, 1 - Visitante');
             $table->timestamps();
