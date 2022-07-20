@@ -23,6 +23,7 @@
                     <tbody>
                         @foreach ($membros as $membro)
                         <?php 
+                       
                             $data_niver = strtotime($membro->niver);
                             $data_convertida_niver = date("d/m/Y", $data_niver);
                         ?> 
@@ -37,7 +38,7 @@
                                     @endif
                                 </td>
                                 <td>{{ $membro->nome }}</td>
-                                <td>{{ $data_convertida_niver }}</td>
+                                <td>{{ $data_convertida_niver}}</td>
                                 <td>{{ $membro->data_membro }}</td>
                                 <td class="d-flex">
                                     <a href="{{ route('pessoas.editar', $membro->id) }}">

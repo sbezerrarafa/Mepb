@@ -8,16 +8,16 @@ class PessoaRequest extends BaseRequest
     {
         return [
             'nome' => 'required',
-            'endereco' => 'min:2',
-            'tell' => 'min:10',
-            'redes_sociais' => 'min:2',
-            'membro_igreja' => 'min:2',
+            'endereco' => 'required|min:2',
+            'tell' => 'required|min:10',
+            'redes_sociais' => 'required|min:2',
+            'membro_igreja' => 'required|min:2',
             'imagem' => '',
             'niver' => 'required|min:10',
-            'data_membro' => 'min:10',
-            'observacoes' => 'min:2',
-            'casado_com' => 'min:2',
-            'niver_casamento' => 'min:10',
+            'data_membro' => 'required|min:10',
+            'observacoes' => 'required|min:2',
+            'casado_com' => 'required|min:2',
+            'niver_casamento' => 'required|min:10',
             'tipo' => 'required|min:0,1'
         ];
     }

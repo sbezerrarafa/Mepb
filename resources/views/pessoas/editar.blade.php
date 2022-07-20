@@ -46,8 +46,7 @@
                 <div class="col-md-6">
                     <label for="">Foto</label>
                     <div class="box-imagens">
-
-                        <img id="img-usuario" src="/image/{{ $pessoa->imagem }}" alt="Imagem-demonstração"
+                        <img id="img-usuario" src="{{ asset('images/ovelhinha.jpg') }}" alt="Imagem-demonstração"
                             value="{{ $pessoa->imagem }}" />
                     </div>
                     <input type="file" name="imagem" id="edit_image" capture="user" onchange="readURL(this);">

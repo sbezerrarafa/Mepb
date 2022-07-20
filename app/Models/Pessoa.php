@@ -34,10 +34,10 @@ class Pessoa extends BaseModel
         $this->attributes['imagem'] = $this->imagemUpload($value);
     }
 
-    // public function setNiverAttribute($value)
-    // {
-    //     $this->attributes['niver'] = Carbon::createFromFormat('d/m/Y', $value)->format('Y-m-d');
-    // }
+    public function setNiverAttribute($value)
+    {
+        $this->attributes['niver'] = Carbon::createFromFormat('d/m/Y', $value)->format('Y-m-d');
+    }
 
     public function getNiverFaixaAttribute($value)
     {
