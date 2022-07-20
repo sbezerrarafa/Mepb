@@ -4,6 +4,10 @@
 @section('title', 'Cadastro')
 
 @section('content')
+<?php 
+  $data_niver = strtotime($pessoa->niver);
+ $data_convertida_niver = date("d/m/Y", $data_niver);
+?> 
     <section class="container-cadastro">
         <div class="logo-canto">
         <a href="{{ route('home') }}">
@@ -55,7 +59,7 @@
             <div class="form-row mt-3">
                 <div class="form-group col-md-6">
                     <label for="inputPassword4">Data de Nascimento</label>
-                    <input type="string" class="form-control" name="niver" id="data-niver" value="{{ $pessoa->niver }}">
+                    <input type="string" class="form-control" name="niver" id="data-niver" value="{{ $data_convertida_niver}}">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputPassword4">Membro Desde de:</label>
